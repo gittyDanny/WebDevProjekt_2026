@@ -1,0 +1,11 @@
+<ul>
+{% for list in lists %}
+<li>
+<input type ="checkbox" id="{{list.id}}">
+    {% if list.completed %}
+        checked
+    {% endif %}
+<a href="{{url_for('list', id=list.id)}}"> </a>
+</li>
+{% endfor %}
+</ul>
